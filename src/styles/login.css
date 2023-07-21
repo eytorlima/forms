@@ -1,0 +1,203 @@
+@charset "UTF-8";
+
+:root {
+    --main-green: #1CD6CA;
+    --second-green: #048A81;
+    --third-green: #013D39;
+    --main-brown: #8A3104;
+    --second-brown: #3D1500;
+    --apricot: #FFD8BE;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    background: linear-gradient(145deg, #111111 55%, var(--main-brown));
+    background-attachment: fixed;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+div#login {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+}
+
+div.form {
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    width: 450px;
+    height: 500px;
+    background-color: rgba(245, 245, 245, 0.9);
+    box-shadow: 0px 3px 9px var(--third-green);
+    border-radius: 6px;
+    align-items: center;
+    justify-content: center;
+    margin: 50px 0 50px 30px;
+}
+
+div.form h1 {
+    margin: 30px auto;
+    text-align: center;
+    color: var(--third-green);
+    font-size: 2.4rem;
+    text-shadow: 0px 1px 3px var(--main-green);
+}
+
+div.form p {
+    color: var(--third-green);
+    font-weight: 700;
+    text-align: center;
+    flex-wrap: wrap;
+    margin: 0px 30px 0px 30px;
+}
+
+div.form div.inputs {
+    justify-content: center;
+}
+
+div.inputs input {
+    position: relative;
+    width: 330px;
+    margin: 30px 10px 0 10px;
+    border: 0;
+    border-bottom: 1px solid var(--third-green);
+    background-color: transparent;
+    outline: 0;
+}
+
+div.inputs label:hover {
+    cursor: text;
+}
+
+div.inputs input:focus ~ label,
+div.inputs input:valid ~ label {
+    transform: translateY(-15px);
+    font-size: 0.8rem;
+    color: gray;
+    text-shadow: none;
+}
+
+div.inputs label {
+    position: absolute;
+    left: 43%;
+    margin-top: 25px;
+    transition: all 500ms ease-in-out;
+    color: black;
+    text-shadow: 1px 1px 1px var(--second-green);
+}
+
+div#buttons {
+    margin: 40px auto;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+div.form button#login-button {
+    display: flex;
+    margin: 0;
+    width: 150px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: var(--third-green);
+    border: none;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: white;
+    box-shadow: 0px 0px 10px black;
+    transition: all 700ms ease-in-out;
+}
+
+div.form button#login-button:hover {
+    -webkit-transform: scale(1.09);
+    transform: scale(1.09);
+    cursor: pointer;
+    box-shadow: 0px 0px 15px white;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+div.form button#ir-cadastro {
+    margin-right: 15px;
+    width: 25px;
+    height: 30px;
+    color: white;
+    background-color: var(--third-green);
+    border: none;
+    border-radius: 6px;
+    box-shadow: 0px 0px 10px black;
+    transform: scale(1.25);
+    transition: all 700ms ease-in-out;
+    position: relative;
+}
+
+div.form button#ir-cadastro:hover {
+    z-index: 2;
+    cursor: pointer;
+    box-shadow: 0px 0px 15px white;
+}
+
+div.form button#ir-cadastro a {
+    position: absolute;
+    width: 25px;
+    height: 30px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-15px);
+}
+
+@media (max-width: 768px){
+    div.form label {
+        left: 32%;
+    }
+}
+
+@media (max-width: 500px) {
+    div#login {
+        width: 100%;
+        height: 100%;
+    }
+
+    div.form {
+        margin: 15% auto;
+        width: 90%;
+    }
+
+    div.form h1 {
+        font-size: 1.65rem;
+    }
+
+    div.form p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 400px){
+    div.inputs input {
+        width: 240px;
+    }
+
+    div.inputs label {
+        left: 20%;
+    }
+}

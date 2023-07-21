@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">  
+
+    <link rel="stylesheet" href="src/styles/index.css">
+    <link rel="shortcut icon" href="src/imgs/favicon.png" type="image/x-icon">
+    <title>Formulário | Cadastro</title>
+</head>
+<body>
+    <div id="cadastro">
+        <div id="imgs" class="hidden-mobile">
+            <div id="bgimg">
+                <img src="src/imgs/main.png" alt="">
+            </div>
+        </div>
+        <main>
+            <div class="form">
+                <h1>Cadastre-se</h1>
+                <p>Preencha os campos abaixo para se cadastrar!</p>
+                <form method="get">
+                    <div class="inputs">
+                        <input type="text" id="nome-cadastro" name="nome-cadastro" required maxlength="20">
+                        <label for="nome-cadastro">Seu nome</label>
+                    </div>
+                    <div class="inputs">
+                        <input type="text" id="email-cadastro" name="email-cadastro" required maxlength="30">
+                        <label for="email-cadastro">Seu e-mail principal</label>
+                    </div>
+                    <div class="inputs">
+                        <input type="text" id="emailconf-cadastro" name="emailconf-cadastro" required maxlength="30">
+                        <label for="emailconf-cadastro">Confirme o e-mail</label>
+                    </div>
+                    <div class="inputs">
+                        <input type="text" id="num-cadastro" name="num-cadastro" required maxlength="11">
+                        <label for="num-cadastro">Seu telefone (com DDD)</label>
+                    </div>
+                    <div class="inputs">
+                        <input type="password" id="senha-cadastro" name="senha-cadastro" required maxlength="30">
+                        <label for="senha-cadastro">Defina uma senha</label>
+                    </div>
+
+                    <div id="buttons">
+                        <button type="submit" id="cadastrar-button">Cadastrar</button>
+                        <button id="ir-login" href="login.html"><a href="login.html" target="_parent">&#10140;</a></button>
+                    </div><!--/buttons-->
+                </form>
+            </div><!--/form-->
+        </main>
+    </div><!--/cadastro-->
+</body>
+</html>
